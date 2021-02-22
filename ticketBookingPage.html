@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>TATA AIRLINES</title>
+<script>
+window.onload=function()
+{
+	var pid =  Math.floor((Math.random() * 10000000) + 1);
+	document.getElementById("pid").value=pid;
+	
+}
+</script>
+<style>
+.ticketBooking {
+width:95%;
+font-size:30px;
+text-align:center;
+padding:5px;
+border:1px solid black;
+margin-left:20px;
+color:white;
+background-color:DodgerBlue;
+}
+.form
+{
+display:inline-bloack;
+ border:1px solid black;
+ width:40%;
+ height:55%;
+ padding:3%;
+ margin-left:30%;
+ margin-right:20%;
+}
+input[type=text],input[type=password],select
+{
+ width:100%;
+ height:30px;
+ font-size:20px;
+ border-radius:5px;
+ border:2px solid black;
+}
+label
+{
+ font-size:20px;
+}
+input[type=submit]
+{ 
+  width:50%;
+  height:50px;
+  border-radius:5%;
+  text-align:center;
+  font-size:25px;
+  color:white;
+  background:green;
+  border:1px solid black;
+  margin-left:25%;
+}
+body {
+  background-image: url('back.jpg');
+background-repeat:no-repeat;
+  background-size:100% 100%;
+  background-position:center;
+}
+.logo
+{
+ color:blue;
+ 
+}
+</style>
+</head>
+<body>
+<div class="logo"><h1>TATA AIRLINES =====&#x2708;</h1></div><hr>
+<div class="ticketBooking">
+<label id='title'>Ticket Booking </lable></div>
+<br><br>
+<div class="form">
+<form action="flightTicketConform.html" method="post">
+<label for="PNRNo">PNR No. : </lable>
+  <br>
+  <br>
+  <input type="text" id="pid" size="30" disabled><br>
+  <br>
+  <label for="TravelDate">Travel Date : </lable>
+  <br>
+  <br>
+  <input type="date" id="start"  min="2021-01-01" 
+  max="2021-12-31" size="25"><br>
+  <br>
+  <label for="Source">Source Airport : </lable>
+  <br>
+  <br>
+  <input type="text" id="Source" size="30"><br>
+  <br>
+  <label for="Destination">Destination Airport : </label>
+  <br>
+  <br>
+  <input type="text" id="Destination" size="30"><br>
+  <br>
+  <br>
+  <label for="Status">Ticket Status  :   </lable>
+   <select id="status" name="Status" style="width:100px">
+  <option value="New" >New</option>
+  <option value="Confirm" >Confirm</option>
+  <option value="Hold" >Hold</option>
+  </select>
+  <br>
+  <br>
+  <br>
+  <label for="Seat">Seat Preference :  </lable>
+   <select id="seat" name="Seat" style="width:100px">
+  <option value="Window" >Window</option>
+  <option value="Middle" >Middle</option>
+  <option value="Aisle" >Aisle</option>
+  </select>
+  <br>
+  <br>
+  <br>
+  <label for="Meal">Meal Preference  :</lable>
+  <select id="meal" name="Meal" style="width:100px">
+  <option value="Veg">Veg</option>
+  <option value="Non Veg">Non Veg</option>
+  </select>
+  <br>
+  <br>
+  <br>
+  <input type="submit" id="Submit" size="15" style="margin-left:110px;color:white;background-color:green;border:2px solid #336600;padding:3px;" value="Book Ticket" ><br>
+  </div>
+  </form>
+</body>
+</html>

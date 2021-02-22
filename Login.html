@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Login Page</title>
+<script>
+function validateForm() {
+var x=document.getElementById("u1").value;
+var y=document.getElementById("p1").value;
+var msg="*invalid inputs";
+if(x=="")
+	{
+	 document.getElementById("t1").innerHTML=msg;
+	 return false;
+	}
+	if(y=="")
+		{
+		document.getElementById("t1").innerHTML=msg;
+		 return false;
+		}
+}
+</script>
+<style>
+.logo
+{
+ color:blue;
+ 
+}
+.title
+{
+text-align:center;
+color:white;
+background-color:DodgerBlue;
+font-size:25px;
+}
+.form
+{
+display:inline-bloack;
+ border:1px solid black;
+ width:40%;
+ height:55%;
+ margin-left:30%;
+ margin-right:20%;
+ margin-top:5%;
+}
+input[type=text],input[type=password]
+{
+ width:100%;
+ height:30px;
+ font-size:20px;
+ border-radius:5px;
+ border:2px solid black;
+}
+input[type=submit]
+{ 
+  width:50%;
+  height:50px;
+  border-radius:5%;
+  text-align:center;
+  font-size:25px;
+  color:white;
+  background:green;
+  border:1px solid black;
+  margin-left:25%;
+}
+.fields
+{
+ padding-left:10%;
+ padding-top:5%;
+ padding-right:10%;
+ padding-bottom:5%;
+ font-size:20px;
+}
+
+</style>
+</head>
+<body>
+<div class="logo"><h1>TATA AIRLINES =====&#x2708;</h1></div><hr>
+<div class="loginbox">
+<div class="form">
+<div class="title">Passenger Login</div>
+<div class="fields">
+<form action="" method="POST" onsubmit="return validateForm()"> 
+<p>UserName* : </p><input type="text" name="u1" id="u1"/>
+<p>Password* : </p><input type="password" name="p1" id="p1"/>
+<p><input type="submit" name="Submit" value="Register" id="r1"/></p>
+<p id="t1" style="color:red;"></p>
+</form>
+</div>
+</div>
+</div>
+</body>
+</html>

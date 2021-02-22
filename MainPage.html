@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>TATA AIRLINES</title>
+<script>
+window.onload=function()
+{
+	var pid =  Math.floor((Math.random() * 100000) + 1);
+	document.getElementById("pid").value=pid;
+	
+}
+function validateForm() {
+	  var x = document.forms["form1"]["pname"].value;
+	  var msg="";
+	  if (x == "") {
+	    msg="*passenger name should not be empty";
+	    document.getElementById("msg").innerHTML=msg;
+	    return false;
+	  }
+	  else if(x.length>=50)
+		  {
+		  msg="*Exceeeding the character limit";
+		    document.getElementById("msg").innerHTML=msg;
+		     return false;
+		  }
+	  var password=document.forms["form1"]["p1"].value;
+	  if(password.length>30)
+		  {
+		  msg="*password limit exceeded";
+		    document.getElementById("msg").innerHTML=msg;
+		    return false;
+		  }
+	  var address=document.forms["form1"]["address"].value;
+	  if(address>100)
+		  {
+		  msg="*address limit exceeded";
+		    document.getElementById("msg").innerHTML=msg;
+		    return false;
+		  }
+	  var contact=document.forms["form1"]["contact"].value;
+	  if(contact.length<10)
+		  {
+		  msg="*invalid number";
+		    document.getElementById("msg").innerHTML=msg;
+		    return false;
+		  }
+		  
+	}
+</script>
+<style>
+.logo
+{
+ color:blue;
+ 
+}
+.form
+{
+display:inline-bloack;
+ border:1px solid black;
+ width:40%;
+ height:55%;
+ margin-left:30%;
+ margin-right:20%;
+ margin-top:5%;
+}
+.title
+{
+text-align:center;
+color:white;
+background-color:DodgerBlue;
+font-size:25px;
+}
+.form
+{
+ border:2px solid black;
+}
+.fields
+{
+ padding-left:10%;
+ padding-top:5%;
+ padding-right:10%;
+ padding-bottom:5%;
+ font-size:20px;
+}
+input[type=text],input[type=password]
+{
+ width:100%;
+ height:30px;
+ font-size:20px;
+ border-radius:5px;
+ border:2px solid black;
+}
+input[type=submit]
+{ 
+  width:50%;
+  height:50px;
+  border-radius:5%;
+  text-align:center;
+  font-size:25px;
+  color:white;
+  background:green;
+  border:1px solid black;
+  margin-left:25%;
+}
+
+</style>
+</head>
+<body>
+<div class="logo"><h1>TATA AIRLINES =====&#x2708;</h1></div><hr>
+<div class="form">
+<div class="title">User Registration</div>
+<div class="fields">
+<form name="form1" action="successPage.html" method="POST" onsubmit="return validateForm()">
+      <p>PID : </p><p id="uid"><input type="text" name="pid" id="pid" disabled/></p>
+      <p>Passenger Name : </p><input type="text" name="pname" id="pname"/><br>
+      <p>Email Id : </p><input type="text" name="emailId" id="eid"/><br>
+      <p>Password : </p><input type="password" name="password" id="p1"/><br>
+      <p>Address : </p><textarea id="w3review" name="address" id="address" rows="5" cols="60" style="border:2px solid black;"></textarea>
+      <p>Contact : </p><input type="text" name="contact" id="contact"/><br>
+      <p><input type="submit" name="Submit" value="Register" id="r1"/></p>
+      <br>
+      <p id="msg" style="color:red;font-size:15px;"></p>
+      </form>
+</div>
+
+</div>
+</body>
+</html>
